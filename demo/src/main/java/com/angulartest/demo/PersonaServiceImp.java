@@ -9,31 +9,34 @@ import org.springframework.stereotype.Service;
 public class PersonaServiceImp implements PersonaService {
 	
 	@Autowired
-	private PersonaRepositorio personaRepositorio;
+	private PersonaRepositorio repositorio;
 	
 	@Override
 	public List<Persona> listar() {
-		return personaRepositorio.findAll();
+		return repositorio.findAll();
 	}
 
 	@Override
-	public Persona findOne(int id) {
-		return personaRepositorio.findById(id);
+	public Persona listarId(int id) {
+		return repositorio.findById(id);
 	}
 
 	@Override
 	public Persona add(Persona p) {
-		return personaRepositorio.save(p);
+		return repositorio.save(p);
 	}
 
 	@Override
 	public Persona edit(Persona p) {
-		return personaRepositorio.save(p);
+		return repositorio.save(p);
 	}
 
 	@Override
 	public Persona delete(int id) {
-		throw new UnsupportedOperationException("delete No Soportado");
+		Persona p = repositorio.findById(id);
+		if(p!=null) {
+			repositorio.delete(p);
+		}
+		return repositorio.delete(p);
 	}
-
 }

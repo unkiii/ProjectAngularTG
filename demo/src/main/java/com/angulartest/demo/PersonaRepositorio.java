@@ -9,7 +9,5 @@ public interface PersonaRepositorio extends Repository<Persona, Integer> {
 	List<Persona>findAll();
 	Persona save(Persona p);
 	Persona findById(int id);	
-	// void delete(User p);
-
-
+	Persona delete(Persona p);
 }
