@@ -1,0 +1,19 @@
+package com.angulartest.demo;
+
+import java.util.List;
+
+import org.springframework.data.repository.Repository;
+
+@org.springframework.stereotype.Repository("personaRepositorio")
+public interface PersonaRepositorio extends Repository<Persona, Integer> {
+
+	List<Persona>findAll();
+
+	Persona save(Persona p);
+
+	Persona findOne(int id);
+	
+	// void delete(User p);
+
+
+}

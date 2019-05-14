@@ -1,0 +1,15 @@
+package com.angulartest.demo;
+
+import java.util.List;
+
+public interface PersonaService {
+	List<user> listar();
+
+	user listarId(int id);
+
+	user add(user p);
+
+	user edit(user p);
+
+	user delete(int id);
+}

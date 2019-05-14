@@ -1,0 +1,19 @@
+package com.angulartest.login;
+
+import java.util.List;
+
+import org.springframework.data.repository.Repository;
+
+public interface PersonaRepositorio extends Repository<User, Integer> {
+
+	List<User>findAll();
+
+/**
+  	User findOne(int id);
+
+	User save(User p);
+
+	void delete(User p);
+
+ */
+}

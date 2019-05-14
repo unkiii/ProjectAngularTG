@@ -1,0 +1,15 @@
+package com.angulartest.login;
+
+import java.util.List;
+
+public interface PersonaService {
+	List<Login> listar();
+
+	Login listarId(int id);
+
+	Login add(Login p);
+
+	Login edit(Login p);
+
+	Login delete(int id);
+}

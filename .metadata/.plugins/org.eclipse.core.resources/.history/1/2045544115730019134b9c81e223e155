@@ -1,0 +1,39 @@
+package com.angulartest.demo;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.stereotype.*;
+
+@Service
+public class PersonaServiceImp implements PersonaService {
+	
+	@Autowired
+	private PersonaRepositorio repositorio;
+	
+	@Override
+	public List<User> listar() {		
+		return repositorio.findAll();
+	}
+
+	@Override
+	public User listarId(int id) {
+		throw new UnsupportedOperationException("listarId No Soportado");
+	}
+
+	@Override
+	public User add(User p) {
+		throw new UnsupportedOperationException("add No Soportado");
+	}
+
+	@Override
+	public User edit(User p) {
+		throw new UnsupportedOperationException("edit No Soportado");
+	}
+
+	@Override
+	public User delete(int id) {
+		throw new UnsupportedOperationException("delete No Soportado");
+	}
+
+}

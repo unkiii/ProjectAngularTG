@@ -1,0 +1,8 @@
+package com.angulartest.demo;
+
+import javax.persistence.*;
+
+@Entity
+public class Persona {
+
+}

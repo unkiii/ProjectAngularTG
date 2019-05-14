@@ -1,0 +1,43 @@
+package com.angulartest.demo;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.stereotype.*;
+
+@Service
+public class PersonaServiceImp implements PersonaService {
+	
+	@Autowired
+	private PersonaRepositorio repositorio;
+	
+	@Override
+	public List<user> listar() {
+		return repositorio.findAll();
+	}
+
+	@Override
+	public user listarId(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public user add(user p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public user edit(user p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public user delete(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

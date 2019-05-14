@@ -1,0 +1,24 @@
+package com.angulartest.demo;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="user")
+public class Persona {
+
+	@Id
+	@Column
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	@Column
+	private String name;
+	@Column
+	private String apellidos;
+	
+	
+	
+	
+	
+	
+	
+}

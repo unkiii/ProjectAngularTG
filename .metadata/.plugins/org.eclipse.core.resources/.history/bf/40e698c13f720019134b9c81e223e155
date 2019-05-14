@@ -1,0 +1,8 @@
+package com.angulartest.demo;
+
+
+
+public interface PersonaService {
+List<Persona>listar();
+Persona listarId(int id);
+}
